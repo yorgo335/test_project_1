@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+
+<body id="contactusBody" onload="CheckSavedTheme('contactusBody')">
+
+    <header class="navigationBar">
+
+	<nav>
+
+		<ul>
+
+			<li><a href="index.html">Home</a></li>
+			<li><a href="store.html">Store</a></li>
+            <li><a class="active" href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			
+		</ul>
+
+	</nav>
+	
+	</header>
+
+    <div>
+        <h1 class="headerStyle1">Contact Us!</h1>
+    </div>
+
+    <div id="contactForm">
+
+        <form action="contactus.html" method="get">
+
+            <label class="labelStyle1">Email:</label><input class="formInputStyle1" type="email" name="email" placeholder="type your email" required><br>
+            <label class="labelStyle1">Comment:</label><textarea class="textAreaStyle1" name="comment" placeholder="type your comment" required></textarea><br>
+            <input class="formButtonStyle1" type="submit" value="Submit"><br>
+            <input class="formButtonStyle1" type="reset" value="Clear">
+
+        </form>
+
+    </div>
+
+
+    <button id="toggleDarkLightBtn" onclick="toggleDarkLight('contactusBody')">
+        <img id="DarkLightImg" src="assets/light-mode.png" alt="Toggle dark/light mode">
+    </button>
+
+
+
+    <footer>
+		<p>&copy; 2025 NotAmazon. We're totally not Amazon&trade;</p>
+	</footer>
+
+    <script src="myScripts.js"></script>
+
+</body>
+
+</html>

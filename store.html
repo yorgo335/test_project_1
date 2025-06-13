@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Store</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+
+<body id="storeBody" onload="CheckSavedTheme('storeBody'); loadProducts();">
+
+    <header class="navigationBar">
+
+	<nav>
+
+		<ul>
+
+			<li><a href="index.html">Home</a></li>
+			<li><a class="active" href="store.html">Store</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			
+		</ul>
+
+	</nav>
+	
+	</header>
+
+    <div>
+        <h1 class="headerStyle1">Browse</h1>
+    </div>
+
+    <div id="browseProducts">
+
+        <!--div class="product">
+            <img src="assets/Beats-Studio-Pro.jpg" alt="Beats Studio Pro">
+            <p><strong>Name:</strong> Beats Studio Pro<br><strong>Price:</strong> 199.99USD</p>
+        </div-->
+        
+    </div>
+
+    <button id="toggleDarkLightBtn" onclick="toggleDarkLight('storeBody')">
+        <img id="DarkLightImg" src="assets/light-mode.png" alt="Toggle dark/light mode">
+    </button>
+
+
+
+    <footer>
+		<p>&copy; 2025 NotAmazon. We're totally not Amazon&trade;</p>
+	</footer>
+
+    <script src="myScripts.js"></script>
+
+</body>
+
+</html>

@@ -1,7 +1,3 @@
-function myFunction(){
-	document.getElementById("test").innerHTML="<h1>I'm sexy and I know it</h1><br><strong>E EE E EEE EEEEEEE</strong>";
-}
-
 /*do note both functions will be used in every page as dark/light mode is universal*/
 
 

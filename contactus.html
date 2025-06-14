@@ -4,7 +4,7 @@
 <head>
 
     <title>Contact Us</title>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" charset="utf-8">
     <link rel="stylesheet" href="Style.css">
 
 </head>
@@ -36,7 +36,9 @@
 
         <form action="contactus.html" method="get">
 
+            <label class="labelStyle1">Name:</label><input class="formInputStyle1" type="text" name="name" placeholder="type your name" required><br>
             <label class="labelStyle1">Email:</label><input class="formInputStyle1" type="email" name="email" placeholder="type your email" required><br>
+            <label class="labelStyle1">Phone:</label><input class="formInputStyle1" type="number" name="phonenumber" placeholder="type your phone number"><br>
             <label class="labelStyle1">Comment:</label><textarea class="textAreaStyle1" name="comment" placeholder="type your comment" required></textarea><br>
             <input class="formButtonStyle1" type="submit" value="Submit"><br>
             <input class="formButtonStyle1" type="reset" value="Clear">

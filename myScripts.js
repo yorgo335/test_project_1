@@ -56,7 +56,7 @@ function loadProducts () {
   	.then(items => {
 		for(let i=0; i<items.length; i++){
 			tag.innerHTML += `<div class="product">
-            	<img src="${items[i].imagepath}" alt="${items[i].name}">
+            	<a href="iteminfo.html?name=${encodeURIComponent(items[i].name)}&imagepath=${items[i].imagepath}&price=${items[i].price}&description=${encodeURIComponent(items[i].description)}"><img src="${items[i].imagepath}" title="${items[i].name}" alt="${items[i].name}"></a>
             	<p><strong>Name:</strong> ${items[i].name}<br><strong>Price:</strong> \$${items[i].price}</p>
         	</div>`
 		}
@@ -64,7 +64,38 @@ function loadProducts () {
 
 }
 
+function loadProductInfo(){
+	const params = new URLSearchParams(window.location.search);
+	const name = params.get('name');
+	const imagepath = params.get('imagepath');
+	const price = params.get('price');
+	const description = params.get('description');
 
+	const tag = document.getElementById("iteminfocontent");
+
+	document.title = name;
+
+	tag.innerHTML = `<img src="${imagepath}" alt="${name}" title="${name}">
+					 <div id="itemdescription">
+					 <p><strong>Name: </strong>${name}<br><strong>Price: </strong>$${price}<br></p>
+					 <span><strong>About the item:</strong><br></span>
+					 <ul>${description.split('\n').map(line => `<li>${line.trim()}</li>`).join('')}</ul>
+					 </div>`;
+}
+
+function orderPopup(){
+	if(confirm("Are you sure you wanna place your order?")){
+		const tag = document.getElementById('OrderPlacedPopup');
+		tag.style.display = "flex";
+	}else{
+		//idk don't need it
+	}
+}
+
+function closePopup(){
+	const tag = document.getElementById('OrderPlacedPopup');
+	tag.style.display = "none";
+}
 
 /* UPDATE: code below is outdated, used to use body's id and stuff and setting the body color and bg color but now i am using
    document.documentElement.set/removeAttribute alongside data-theme to basically make it so that by default its light and you can toggle

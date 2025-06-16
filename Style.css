@@ -79,6 +79,11 @@ body{
 
 /*navigationBar is what will be on top of every page with the purpose of navigating between pages*/
 
+.navigationBar{
+	position: sticky;
+	top: 0;
+}
+
 .navigationBar ul{ /*no list style, removing default padding, applying a margin and hiding overflows*/
 	list-style-type: none;
 	display: flex; /*flex container in row for every li in ul*/
@@ -222,6 +227,104 @@ body{
 	display:inline-block;
 	width: 200px;
 	height: 30px;
+	cursor: pointer;
 	color: black;
 	background-color: whitesmoke;
+}
+
+.formButtonStyle1:hover{
+	filter: brightness(80%);
+}
+
+/* iteminfo */
+
+#backLink img{
+	position: absolute;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	padding: 8px;
+}
+
+#backLink img:hover{
+	filter: brightness(80%);
+}
+
+#iteminfocontent{
+	position: relative;
+	top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#itemdescription{
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+#iteminfocontent img{
+	margin: auto;
+	width: 400px;
+	height: 400px;
+}
+
+#itemdescription p{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 1.4em;
+}
+
+#itemdescription ul{
+	margin-left: 6%;
+}
+
+#itemdescription ul li{
+	max-width: 960px;
+}
+
+#itemdescription span{
+	margin-right: auto;
+	font-size: 1.4em;
+}
+
+#orderNow{
+	display: flex;
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2px 12px;
+	width: 160px;
+	height: 100px;
+	font-size: 40px;
+	border-radius: 30px;
+	border: 2px black;
+	cursor: pointer;
+	text-align: center;
+	background-color: var(--btncolor);
+	color: var(--btntextcolor);
+}
+
+#orderNow:hover{
+	filter: brightness(80%);
+}
+
+#OrderPlacedPopup{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 90%;
+	height: 20%;
+	border: 2px solid black;
+	border-radius: 15px;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 30px;
+	padding: 10px;
+	z-index: 1000; /* so its on top no matter what*/
+	background-color: var(--btncolor);
+	color: var(--btntextcolor);
 }

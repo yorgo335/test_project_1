@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Item Info</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.8" charset="utf-8">
+	<link rel="stylesheet" href="Style.css">
+	<link rel="icon" href="assets/packaging.png">
+
+</head>
+
+<body onload="loadProductInfo()">
+
+    <div>
+        <h1 class="headerStyle1">Item info</h1>
+    </div>
+
+    <div id="iteminfocontent">
+
+    </div>
+
+    <button id="orderNow" type="button" onclick="orderPopup()">
+						Order Now!
+	</button>
+
+    <div id="OrderPlacedPopup">
+        <h1>Order placed!</h1>
+        <p>You will receive the receipt to your email in a few moments.</p>
+        <button class="formButtonStyle1" onclick="closePopup()">
+            OK
+        </button>
+    </div>
+
+    <a id="backLink" href="store.html">
+        <img src="assets/backarrow.png">
+    </a>
+
+    <button id="toggleDarkLightBtn" type="button" onclick="toggleDarkLight()">
+		<img id="DarkLightImg" src="assets/light-mode.png" alt="Toggle dark/light mode">
+	</button>
+
+
+    <script src="myScripts.js"></script>
+
+</body>
+
+</html>

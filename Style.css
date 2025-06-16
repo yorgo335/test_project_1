@@ -23,6 +23,10 @@
 	padding: 0;
 }
 
+html {
+  -webkit-text-size-adjust: 100%; /* disables auto text zoom */
+}
+
 footer{
 	position: fixed;
 	bottom: 0;
@@ -339,8 +343,7 @@ body{
 	left: 50%;
 	translate: -50% -50%;
 	width: 100%;
-	font-size: 2em;
+	font-size: 1.5em;
 	text-align: center;
 	font-weight: bold;
-
 }

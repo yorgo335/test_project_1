@@ -2,6 +2,19 @@
 
 :root{
 	--primary: rgb(34, 139, 34);
+	--bgcolor: rgb(250, 243, 224);
+	--secondary: rgb(51, 51, 51);
+	--btncolor: rgb(255, 193, 7);
+	--btntextcolor: rgb(51, 51, 51);
+
+}
+
+[data-theme="dark"]{
+	--primary: rgb(34, 139, 34);
+	--bgcolor: rgb(30, 43, 46);
+	--secondary: rgb(224, 224, 224);
+	--btncolor: rgb(40, 150, 136);
+	--btntextcolor: rgb(240, 240, 240);
 }
 
 *{
@@ -17,22 +30,32 @@ footer{
 	font-size: 1em;
 }
 
+body{
+	background-color: var(--bgcolor);
+	color: var(--secondary);
+}
+
+
+/* discontinued both of these class .Dark and .Light, its outdated and uses old JS functions and also was just disgustingly bad when involved background-image
+   only left them so that i can just have archive of theme */
 .Dark{
 	/*background-color: rgb(44,44,45);*/
+	background-color: rgb(30, 43, 46);
 	color: white;
-	background-image: url("assets/dark-background.jpg");
+	/*background-image: url("assets/dark-background.jpg");
 	min-height: 100vh;
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 }
 
 .Light{
 	/*background-color: whitesmoke;*/
+	background-color: rgb(247, 247, 247);
 	color: black;
-	background-image: url("assets/light-background.jpg");
+	/*background-image: url("assets/light-background.jpg");
 	min-height: 100vh;
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 }
 
 #toggleDarkLightBtn{
@@ -126,8 +149,8 @@ footer{
 	border: 2px black;
 	cursor: pointer;
 	text-align: center;
-	background-color: var(--primary);
-	color: black;
+	background-color: var(--btncolor);
+	color: var(--btntextcolor);
 	
 }
 
@@ -167,8 +190,8 @@ footer{
 #contactForm form{
 	padding: 50px;
 	border-radius: 40px;
-	background-color: var(--primary);
-	color: black;
+	background-color: var(--btncolor);
+	color: var(--btntextcolor);
 }
 
 .formInputStyle1{

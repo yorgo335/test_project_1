@@ -294,7 +294,7 @@ body{
 	font-size: 1.4em;
 }
 
-#orderNow{
+#orderNowBtn{
 	display: flex;
 	margin-top: 70px;
 	margin-left: auto;
@@ -311,7 +311,7 @@ body{
 	color: var(--btntextcolor);
 }
 
-#orderNow:hover{
+#orderNowBtn:hover{
 	filter: brightness(80%);
 }
 

@@ -1,5 +1,6 @@
 /* I did not remove any old codes because they will a 100% help me understand the thought process incase i forget something in the newer codes */
 
+
 function toggleDarkLight() { 
 	const currentTheme= document.documentElement.getAttribute('data-theme');
 	const imgTag = document.getElementById("DarkLightImg");
@@ -16,6 +17,7 @@ function toggleDarkLight() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+	const toggleDarkLightBtn = document.getElementById("toggleDarkLightBtn");
 	const imgTag = document.getElementById("DarkLightImg")
 	if(localStorage.getItem("theme") == "dark"){
 		document.documentElement.setAttribute('data-theme', 'dark');
@@ -23,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	}else{
 		imgTag.src = "assets/dark-mode.png";
 	}
+
+	toggleDarkLightBtn.onclick = toggleDarkLight;
 });
 
 /*alternatively i could make each body tag have onload="CheckSavedTheme()" and run the function below
@@ -81,6 +85,11 @@ function loadProductInfo(){
 					 <span><strong>About the item:</strong><br></span>
 					 <ul>${description.split('\n').map(line => `<li>${line.trim()}</li>`).join('')}</ul>
 					 </div>`;
+
+	const orderNowBtn = document.getElementById("orderNowBtn");
+	orderNowBtn.onclick = orderPopup;
+	const closePopupBtn = document.getElementById("closePopupBtn");
+	closePopupBtn.onclick = closePopup;
 }
 
 function orderPopup(){

@@ -9,6 +9,14 @@
 
 }
 
+[data-theme="light"]{
+	--primary: rgb(34, 139, 34);
+	--bgcolor: rgb(250, 243, 224);
+	--secondary: rgb(51, 51, 51);
+	--btncolor: rgb(255, 193, 7);
+	--btntextcolor: rgb(51, 51, 51);
+}
+
 [data-theme="dark"]{
 	--primary: rgb(34, 139, 34);
 	--bgcolor: rgb(30, 43, 46);

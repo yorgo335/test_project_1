@@ -14,7 +14,7 @@ function toggleDarkLight() {
 
 	if(currentTheme == "dark"){
 		
-		document.documentElement.removeAttribute('data-theme');
+		document.documentElement.setAttribute('data-theme', 'light');
 		imgTag.src = "assets/dark-mode.png";
 		localStorage.setItem("theme", "light");
 

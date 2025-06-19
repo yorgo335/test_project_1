@@ -14,8 +14,13 @@
 const imgTag = document.getElementById("DarkLightImg")
     
 if(localStorage.getItem("theme") == "dark"){
+
 	document.documentElement.setAttribute('data-theme', 'dark');
 	imgTag.src = "assets/light-mode.png";
+
 }else{
+
+	document.documentElement.setAttribute('data-theme', 'light');
 	imgTag.src = "assets/dark-mode.png";
+	
 }

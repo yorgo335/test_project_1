@@ -1,11 +1,11 @@
 // iteminfo page require a diff DOMContentLoaded, and instead on relying on if else or using onload="" in html i decided to opt for
 // a diff js file for it, oh and functions only used here will be placed here
 
-import { checkSavedTheme } from './functions.js';
+import { setupThemeToggle } from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    checkSavedTheme(); //load the theme light by default or dark if user previously used it
+    setupThemeToggle(); //load the theme light by default or dark if user previously used it
 
     //I opted for the sending product info through the URL by using ?name=.... so that i can have 1 html file who I dynamically
     //load the product info.

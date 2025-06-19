@@ -1,10 +1,10 @@
 // special script for store, it is mostly just for loading the products from json file, if working with databse i would be relying on sql
 
-import { checkSavedTheme } from './functions.js';
+import { setupThemeToggle } from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    checkSavedTheme(); //load the theme light by default or dark if user previously used it
+    setupThemeToggle(); //load the theme light by default or dark if user previously used it
 
     const tag = document.getElementById("browseProducts");
 

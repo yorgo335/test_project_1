@@ -1,32 +1,57 @@
 /* I did not remove any old codes because they will a 100% help me understand the thought process incase i forget something in the newer codes */
 
+// UPDATE: I have now seperated the JS codes into multiple JS files.
+
+
+
+//  !!!!!!!!! IMPORTANT !!!!!!!!!
+//
+// ignore this file, I only kept this file as it was my first solution for JS part of my site so it would be a waste to remove it
+// it will probably be heavily outdated too
+//
+// !!!!!!!!!! IMPORTANT !!!!!!!!!
+
 
 function toggleDarkLight() { 
+
 	const currentTheme= document.documentElement.getAttribute('data-theme');
 	const imgTag = document.getElementById("DarkLightImg");
+
 	if(currentTheme == "dark"){
+
 		document.documentElement.removeAttribute('data-theme');
 		imgTag.src = "assets/dark-mode.png";
 		localStorage.setItem("theme", "light");
+
 	}else{
+
 		document.documentElement.setAttribute('data-theme', 'dark');
 		imgTag.src = "assets/light-mode.png";
 		localStorage.setItem("theme", "dark");
+
 	}
+
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
 	const toggleDarkLightBtn = document.getElementById("toggleDarkLightBtn");
-	const imgTag = document.getElementById("DarkLightImg")
+	const imgTag = document.getElementById("DarkLightImg");
+
 	if(localStorage.getItem("theme") == "dark"){
+
 		document.documentElement.setAttribute('data-theme', 'dark');
 		imgTag.src = "assets/light-mode.png";
+
 	}else{
+
 		imgTag.src = "assets/dark-mode.png";
+
 	}
 
 	toggleDarkLightBtn.onclick = toggleDarkLight;
+
 });
 
 /*alternatively i could make each body tag have onload="CheckSavedTheme()" and run the function below
@@ -58,17 +83,22 @@ function loadProducts () {
 	fetch('items.json')
   	.then(response => response.json())
   	.then(items => {
+
 		for(let i=0; i<items.length; i++){
+
 			tag.innerHTML += `<div class="product">
             	<a href="iteminfo.html?name=${encodeURIComponent(items[i].name)}&imagepath=${items[i].imagepath}&price=${items[i].price}&description=${encodeURIComponent(items[i].description)}"><img src="${items[i].imagepath}" title="${items[i].name}" alt="${items[i].name}"></a>
             	<p><strong>Name:</strong> ${items[i].name}<br><strong>Price:</strong> \$${items[i].price}</p>
         	</div>`
+
 		}
+
   	})
 
 }
 
 function loadProductInfo(){
+
 	const params = new URLSearchParams(window.location.search);
 	const name = params.get('name');
 	const imagepath = params.get('imagepath');
@@ -90,20 +120,25 @@ function loadProductInfo(){
 	orderNowBtn.onclick = orderPopup;
 	const closePopupBtn = document.getElementById("closePopupBtn");
 	closePopupBtn.onclick = closePopup;
+
 }
 
 function orderPopup(){
+
 	if(confirm("Are you sure you wanna place your order?")){
+
 		const tag = document.getElementById('OrderPlacedPopup');
 		tag.style.display = "flex";
-	}else{
-		//idk don't need it
+
 	}
+
 }
 
 function closePopup(){
+
 	const tag = document.getElementById('OrderPlacedPopup');
 	tag.style.display = "none";
+
 }
 
 /* UPDATE: code below is outdated, used to use body's id and stuff and setting the body color and bg color but now i am using

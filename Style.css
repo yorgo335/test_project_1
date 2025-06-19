@@ -190,8 +190,6 @@ body{
 #contactForm{
 	display: flex;
 	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 5%;
 	font-size: 1.2em;
 	color: white;
@@ -229,7 +227,8 @@ body{
 }
 
 .formButtonStyle1{
-	display:inline-block;
+	display: block;
+	margin-bottom: 0.5%;
 	width: 200px;
 	height: 30px;
 	cursor: pointer;
@@ -334,6 +333,18 @@ body{
 	color: var(--btntextcolor);
 }
 
+#closePopupBtn{
+	display: block;
+	width: 200px;
+	height: 30px;
+	cursor: pointer;
+	color: black;
+	background-color: whitesmoke;
+}
+
+#closePopupBtn:hover{
+	filter: brightness(80%);
+}
 
 /* About Us */
 

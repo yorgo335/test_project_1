@@ -54,8 +54,9 @@ function confirmOrderPopup(){
 	const confirmTag = document.getElementById("confirmOrderPopup");
 	confirmTag.style.display = "none";
 
-	const orderTag = document.getElementById("OrderPlacedPopup");
-	orderTag.style.display = "flex";
+	//moved it to the animation function to avoid flash of the element before animation
+	//const orderTag = document.getElementById("OrderPlacedPopup");
+	//orderTag.style.display = "flex";
 
 	fadeInOrderPlacedPopup();
 
@@ -123,9 +124,10 @@ function movePopupTopToCenter(){
 function fadeInOrderPlacedPopup(){
 	
 	var elem = document.getElementById("OrderPlacedPopup");
-	var pos = 10;
+	var pos = 30;
 	
-	elem.style.filter = `brightness(0%)`;
+	elem.style.filter = `brightness(${pos}%)`;
+	elem.style.display = "flex";
 
 	clearInterval(id);
 	id= setInterval(frame, 16);

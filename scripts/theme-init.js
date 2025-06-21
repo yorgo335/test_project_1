@@ -6,21 +6,14 @@
 
 // checks the saved theme on the localStorage 
 // if its dark then set dark by using my custom attribute data-theme 
-// else keep it default (:root) or in other words light mode
-
-// I did consider going for data-theme="light" but I thought using :root might just be better
-// yes it does mean I do .removeAttribute('data-theme') to go light mode but for now this works fine
-
-const imgTag = document.getElementById("DarkLightImg")
+// else keep it default being light mode
     
 if(localStorage.getItem("theme") == "dark"){
 
 	document.documentElement.setAttribute('data-theme', 'dark');
-	imgTag.src = "assets/light-mode.png";
 
 }else{
 
 	document.documentElement.setAttribute('data-theme', 'light');
-	imgTag.src = "assets/dark-mode.png";
 	
 }

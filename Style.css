@@ -48,28 +48,6 @@ body{
 }
 
 
-/* discontinued both of these class .Dark and .Light, its outdated and uses old JS functions and also was just disgustingly bad when involved background-image
-   only left them so that i can just have archive of theme */
-.Dark{
-	/*background-color: rgb(44,44,45);*/
-	background-color: rgb(30, 43, 46);
-	color: white;
-	/*background-image: url("assets/dark-background.jpg");
-	min-height: 100vh;
-	background-size: cover;
-	background-repeat: no-repeat;*/
-}
-
-.Light{
-	/*background-color: whitesmoke;*/
-	background-color: rgb(247, 247, 247);
-	color: black;
-	/*background-image: url("assets/light-background.jpg");
-	min-height: 100vh;
-	background-size: cover;
-	background-repeat: no-repeat;*/
-}
-
 #toggleDarkLightBtn{
 	position: fixed;
 	bottom: 30px;
@@ -249,10 +227,13 @@ body{
 }
 
 /* iteminfo */
+#backLink{
+	position: fixed;
+	top: 0;
+}
 
 #backLink img{
-	position: absolute;
-	top: 0;
+	display: block;
 	width: 50px;
 	height: 50px;
 	padding: 8px;
@@ -322,6 +303,29 @@ body{
 	filter: brightness(80%);
 }
 
+#confirmOrderPopup{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 90%;
+	height: 25%;
+	border: 2px solid black;
+	border-radius: 15px;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 30px;
+	padding: 10px;
+	z-index: 1000; /* so its on top no matter what*/
+	background-color: var(--btncolor);
+	color: var(--btntextcolor);
+}
+
+#confirmOrderBtnLayout{
+	row-gap: 0;
+}
+
 #OrderPlacedPopup{
 	display: none;
 	position: fixed;
@@ -341,7 +345,7 @@ body{
 	color: var(--btntextcolor);
 }
 
-#closePopupBtn{
+.OrderPopupBtn{
 	display: block;
 	width: 200px;
 	height: 30px;
@@ -350,7 +354,7 @@ body{
 	background-color: whitesmoke;
 }
 
-#closePopupBtn:hover{
+.OrderPopupBtn:hover{
 	filter: brightness(80%);
 }
 
@@ -365,4 +369,73 @@ body{
 	font-size: 1.5em;
 	text-align: center;
 	font-weight: bold;
+}
+
+#playNowBtn{
+	opacity: 0;
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	translate: -50% 0;
+	width: 160px;
+	height: 80px;
+	padding: 14px 20px;
+	border: 2px solid black;
+	border-radius: 20px;
+	background-color: var(--btncolor);
+	color: var(--btntextcolor);
+	font-size: 1.2em;
+	cursor: pointer;
+}
+#playNowBtn:hover{
+	opacity: 1;
+}
+
+/* Game page */
+
+#gameBody{
+	background-image: url('assets/game-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+#theGame {
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 500px;
+	max-width: 500px;
+	max-height: 400px;
+	background-color: lightgray;
+	color: white;
+	padding: 10px;
+}
+
+#playerStats{
+	border: 1px solid black;
+  	color: black;
+  	padding: 5px;
+}
+
+#monsterStats{
+	display: none;
+	border: 1px solid black;
+  	color: black;
+  	padding: 5px;
+	background-color: red;
+}
+
+#rpgText{
+	border: 1px solid lightgray;
+	background-color: black;
+	color: white;
+	padding: 5px;
+}
+
+#gameControls{
+	border: 1px solid black;
+	padding: 5px;
 }

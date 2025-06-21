@@ -25,10 +25,25 @@
 						Order Now!
 	</button>
 
+    <div id="confirmOrderPopup">
+        <h1>Confirmation Required</h1>
+        <p>Are you sure you want to place your order?</p>
+
+        <div id="confirmOrderBtnLayout">
+            <button id="confirmOrderPopupBtn" class="OrderPopupBtn">
+                Confirm
+            </button>
+                <button id="cancelOrderPopupBtn" class="OrderPopupBtn">
+                Cancel
+            </button>
+        </div>
+        
+    </div>
+
     <div id="OrderPlacedPopup">
         <h1>Order placed!</h1>
         <p>You will receive the receipt to your email in a few moments.</p>
-        <button id="closePopupBtn">
+        <button id="closeOrderPopupBtn" class="OrderPopupBtn">
             OK
         </button>
     </div>

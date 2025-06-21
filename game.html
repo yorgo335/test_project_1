@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="./scripts/theme-init.js"></script>
+	<title>Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.7" charset="utf-8">
+	<link rel="stylesheet" href="Style.css">
+	<link rel="icon" href="assets/game-icon.png">
+
+</head>
+
+<body id="gameBody">
+
+    <div>
+        <h1 class="headerStyle1">Simple RPG game</h1>
+    </div>
+
+    <div id="theGame">
+        <div id="playerStats">
+            <p><strong>XP: </strong><span id="playerXP"></span> 
+                <strong>HP: </strong><span id="playerHP"></span> 
+                <strong>Gold: </strong><span id="playerGold"></span></p>
+        </div>
+        <div id="gameControls">
+            <button id="gameControl1" type="button">Go to store</button>
+            <button id="gameControl2" type="button">Go to cave</button>
+            <button id="gameControl3" type="button">Challenge dragon</button>
+        </div>
+        <div id="monsterStats">
+            <p>
+                <strong>Monster Name: </strong><span id="monsterName"></span><br>
+                <strong>HP: </strong><span id="monsterHP"></span>
+            </p>
+        </div>
+        <div id="rpgText">
+            Welcome to god knows where. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
+        </div>
+
+    </div>
+
+
+    <a id="backLink" href="aboutus.html">
+        <img src="assets/backarrow.png">
+    </a>
+
+
+    <footer>
+        <p>&copy; 2025 NotAmazon. We're totally not Amazon&trade;</p>
+    </footer>
+
+    <script type="module" src="./scripts/gamescript.js"></script>
+
+</body>
+
+</html>

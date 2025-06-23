@@ -45,6 +45,14 @@ footer{
 body{
 	background-color: var(--bgcolor);
 	color: var(--secondary);
+	padding-bottom: 2%; /* so PCs won't see the footer mix with other texts/img/btn/... */
+}
+
+/* so mobile phones won't see the footer mix with other texts/img/btn/... and yes I needed a different % for the padding*/
+@media(max-width: 1000px){
+	body {
+    padding-bottom: 8%;
+  }
 }
 
 
@@ -159,16 +167,27 @@ body{
 #browseProducts{
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: 1.5%;
+	row-gap: 10px;
 	column-gap: 6.3%;
-	margin-left: 4.6%;
+	margin-left: 5%;
 	margin-top: 1%;
+}
+
+/* for mobile phones I fixed margin to look a bit better*/
+@media (max-width: 1000px){
+	#browseProducts{
+		margin-left: 7%;
+	}
 }
 
 .product img{
 	width: 200px;
 	height: 200px;
 	cursor: pointer;
+}
+
+.product p{
+	max-width: 200px;
 }
 
 /*Contact Us page*/

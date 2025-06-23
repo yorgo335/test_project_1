@@ -1,5 +1,8 @@
 Project 1 - html, css and JS
 
+!!!!!! I used Visual Studio Code Live Server to make this work as I have used localStorage, fetch() and import/export so please use Live Server or any similar software that can run the pages on the SAME DOMAIN !!!!!!
+
+
 All products information and images were taken from amazon.com
 
 This project is based on E-commerce site where you can browse products (only 15 products) and check their informations and place orders

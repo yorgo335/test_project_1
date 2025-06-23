@@ -1,6 +1,6 @@
 Project 1 - html, css and JS
 
-!!!!!! I used Visual Studio Code Live Server to make this work as I have used localStorage which relies on all pages having the SAME DOMAIN !!!!!!
+!!!!!! I used Visual Studio Code Live Server to make this work as I have used localStorage, fetch() and import/export so please use Live Server or any similar software that can run the pages on the SAME DOMAIN !!!!!!
 
 
 All products information and images were taken from amazon.com

@@ -73,7 +73,7 @@ function cancelOrderPopup(){
 
 function orderPopup(){
 
-	const tag = document.getElementById("confirmOrderPopup");
+	//const tag = document.getElementById("confirmOrderPopup");
 	//tag.style.display = "flex"; //moved it to the animation function to avoid flash of the element before animation
 	blurAllButPopup();
 

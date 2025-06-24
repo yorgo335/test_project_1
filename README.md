@@ -6,6 +6,7 @@ Project 1 - html, css and JS
 All products information and images were taken from amazon.com
 
 This project is based on E-commerce site where you can browse products (only 15 products) and check their informations and place orders
+Now placing orders doesn't exactly do anything aside from showing a popup mentioning that you placed an order
 
 I have done tests to make this work on both PCs and mobile phones (I mainly used an iPhone 16)
 

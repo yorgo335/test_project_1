@@ -17,6 +17,6 @@ Thursday 19th, I focused on splitting the 1 script file into multiple script fil
 
 Friday 20th, I tried learning some VERY BASIC animations like fading in or moving an element to a position (I achieved these with clearInterval and setInterval alongside a function frame which will have an if/else deciding what to do every frame)
 
-Monday 22th, I only added more products till I hit 15 products. (do not products are loaded dynamically so only 1 html file)
+Monday 22th, I only added more products till I hit 15 products. (do note products are loaded dynamically so only 1 html file)
 
 There is an easter egg if you hover on the very bottom in the center of the about us screen. (a small basic text rpg game)

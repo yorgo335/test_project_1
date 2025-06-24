@@ -415,8 +415,7 @@ body{
 #gameBody{
 	background-image: url('assets/game-bg.png');
 	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 100vh;
+	background-size: 100vw 100vh;
 }
 
 #theGame {
